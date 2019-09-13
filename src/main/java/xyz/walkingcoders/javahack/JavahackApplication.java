@@ -2,6 +2,7 @@ package xyz.walkingcoders.javahack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
 public class JavahackApplication {
@@ -10,4 +11,8 @@ public class JavahackApplication {
 		SpringApplication.run(JavahackApplication.class, args);
 	}
 
+	@GetMapping("/testRequest")
+	public String testRequest() {
+		return "Ok";
+	}
 }
