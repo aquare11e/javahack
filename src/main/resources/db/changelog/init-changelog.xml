@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="1" author="Ruslan Komarov">
+        <sql>
+            CREATE TABLE account(
+                id BIGSERIAL PRIMARY KEY,
+                number varchar(25) NOT NULL
+            );
+
+            CREATE TABLE client(
+                id BIGSERIAL PRIMARY KEY,
+                first_name VARCHAR(30) NOT NULL,
+                last_name VARCHAR(30) NOT NULL,
+                middle_name VARCHAR(30) NOT NULL,
+                login VARCHAR(20) NOT NULL,
+                password VARCHAR(20) NOT NULL,
+                email VARCHAR(35) NOT NULL,
+                inn VARCHAR(20)
+            );
+
+            CREATE TABLE counteragent(
+                id BIGSERIAL PRIMARY KEY,
+                name VARCHAR(30) NOT NULL,
+                owner_id BIGINT NOT NULL REFERENCES client(id),
+                type VARCHAR(10) NOT NULL,
+                inn VARCHAR(20),
+                account_id BIGINT NOT NULL REFERENCES account(id)
+            );
+
+            CREATE TABLE notification(
+                id BIGSERIAL PRIMARY KEY,
+                text TEXT NOT NULL,
+                created TIMESTAMP NOT NULL,
+                active BOOLEAN NOT NULL
+            );
+
+            CREATE TABLE transaction(
+                id BIGSERIAL PRIMARY KEY,
+                owner_id BIGINT NOT NULL REFERENCES client(id),
+                type VARCHAR(10) NOT NULL,
+                created TIMESTAMP NOT NULL,
+                sum NUMERIC NOT NULL,
+                currency VARCHAR(10) NOT NULL,
+                from_account_id BIGINT NOT NULL REFERENCES account(id),
+                to_account_id BIGINT NOT NULL REFERENCES account(id)
+            );
+
+            CREATE TABLE payment(
+                id BIGSERIAL PRIMARY KEY,
+                type VARCHAR(10) NOT NULL,
+                transaction_id BIGINT NOT NULL REFERENCES transaction(id),
+                client_id BIGINT NOT NULL REFERENCES client(id),
+                counteragent_id BIGINT REFERENCES counteragent(id)
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>

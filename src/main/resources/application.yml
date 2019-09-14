@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgredb/javahack
+    url: jdbc:postgresql://infra.walkingcoders.xyz/javahack
     username: dbuser
     password: password
     driver-class-name: org.postgresql.Driver
@@ -10,6 +10,6 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: false
   liquibase:
-    change-log: classpath:changelog/changelog.yaml
+    change-log: classpath:db/changelog-master.xml
 
 
