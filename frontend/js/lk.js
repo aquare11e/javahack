@@ -1,3 +1,4 @@
+/*
 function checkInn(){
     $.ajax({
         method: "POST",
@@ -6,7 +7,9 @@ function checkInn(){
         success: function(data){
             $('.knopkilk').hide();
             $('#agent_data').append('<li>'+data['name']+'</li>'+
-            '<li>'+data['owner']+'</li>'+ '<li>'+data['razmer_nalog']+'</li>');
+            '<li>'+data['owner']+'</li>'+
+            '<li>'+data['risk_nal']+'</li>' + 
+            '<li>'+data['negativ_factor']+'</li>');
             $('#another_check').show();
         },
         error: function(data){
@@ -14,3 +17,4 @@ function checkInn(){
         }
     });
 }
+*/
