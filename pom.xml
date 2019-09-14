@@ -50,7 +50,16 @@
 			<artifactId>postgresql</artifactId>
 			<version>${postgre.driver.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.netflix.feign</groupId>
+			<artifactId>feign-core</artifactId>
+			<version>8.18.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.netflix.feign</groupId>
+			<artifactId>feign-jackson</artifactId>
+			<version>8.18.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

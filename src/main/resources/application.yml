@@ -9,4 +9,4 @@ spring:
       ddl-auto: none
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: false
-
+fns-api: a942ec3ce28fe7a65ee0e1888be8edae7985a35f
