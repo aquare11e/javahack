@@ -21,8 +21,7 @@ a:focus {
 
 body {
   height: 100vh;
-  padding: 15px 0;
-  background-image: url("./fon.png");
+  background-image: url("./1.png");
   background-repeat: no-repeat;
   background-size: cover;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
@@ -278,6 +277,7 @@ body {
     padding-top: 20px;
     width: 600px;
     text-align: center;
+    opacity: 0.1;
 
   }
   .lkbutton2 {
@@ -286,6 +286,7 @@ body {
     padding-top: 20px;
     width: 200px;
     border-radius: 15PX;
+    opacity: 0.8;
   }
 
   .proverka-kontragent {
@@ -294,7 +295,4 @@ body {
     width: 900px;
     margin-left: 370px;
   }
-
-  #pole {
-    width: 900px;
-  }
+  
