@@ -11,6 +11,10 @@ public class JavahackApplication {
 		SpringApplication.run(JavahackApplication.class, args);
 	}
 
+	/**
+	 * THIS IS TEST
+	 * @return
+	 */
 	@GetMapping("/testRequest")
 	public String testRequest() {
 		return "Ok";
