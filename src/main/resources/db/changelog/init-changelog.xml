@@ -17,11 +17,17 @@
                 id BIGSERIAL PRIMARY KEY,
                 first_name VARCHAR(30) NOT NULL,
                 last_name VARCHAR(30) NOT NULL,
-                middle_name VARCHAR(30) NOT NULL,
+                middle_name VARCHAR(30),
                 login VARCHAR(20) NOT NULL,
                 password VARCHAR(20) NOT NULL,
                 email VARCHAR(35) NOT NULL,
                 inn VARCHAR(20)
+            );
+
+            CREATE TABLE client_account(
+                client_id  BIGINT REFERENCES client (id),
+                account_id BIGINT REFERENCES account(id),
+                PRIMARY KEY(client_id, account_id)
             );
 
             CREATE TABLE counteragent(
@@ -33,17 +39,10 @@
                 account_id BIGINT NOT NULL REFERENCES account(id)
             );
 
-            CREATE TABLE notification(
-                id BIGSERIAL PRIMARY KEY,
-                text TEXT NOT NULL,
-                created TIMESTAMP NOT NULL,
-                active BOOLEAN NOT NULL
-            );
-
             CREATE TABLE transaction(
                 id BIGSERIAL PRIMARY KEY,
                 owner_id BIGINT NOT NULL REFERENCES client(id),
-                type VARCHAR(10) NOT NULL,
+                direction VARCHAR(10) NOT NULL,
                 created TIMESTAMP NOT NULL,
                 sum NUMERIC NOT NULL,
                 currency VARCHAR(10) NOT NULL,
@@ -53,11 +52,67 @@
 
             CREATE TABLE payment(
                 id BIGSERIAL PRIMARY KEY,
-                type VARCHAR(10) NOT NULL,
                 transaction_id BIGINT NOT NULL REFERENCES transaction(id),
-                client_id BIGINT NOT NULL REFERENCES client(id),
                 counteragent_id BIGINT REFERENCES counteragent(id)
             );
+
+            CREATE TABLE tax(
+                id BIGSERIAL PRIMARY KEY,
+                payment_id BIGINT NOT NULL REFERENCES payment(id),
+                percent NUMERIC NOT NULL,
+                sum NUMERIC NOT NULL
+            );
+
+            CREATE TABLE contract(
+                id BIGSERIAL PRIMARY KEY,
+                counteragent_id BIGINT NOT NULL REFERENCES counteragent(id),
+                owner_id BIGINT NOT NULL REFERENCES client(id),
+                sum NUMERIC NOT NULL,
+                start_date TIMESTAMP NOT NULL,
+                end_date TIMESTAMP NOT NULL
+            );
+
+            CREATE TABLE expected_payment(
+                id BIGSERIAL PRIMARY KEY,
+                direction VARCHAR(10) NOT NULL,
+                payment_id BIGINT REFERENCES payment(id),
+                owner_id BIGINT NOT NULL REFERENCES client(id),
+                counteragent_id BIGINT REFERENCES counteragent(id),
+                contract_id BIGINT REFERENCES contract(id),
+                last_payment_day TIMESTAMP NOT NULL
+            );
+
+            CREATE TABLE notification(
+                id BIGSERIAL PRIMARY KEY,
+                client_id BIGINT NOT NULL REFERENCES client(id),
+                text TEXT NOT NULL,
+                created TIMESTAMP NOT NULL,
+                active BOOLEAN NOT NULL
+            );
+
+            CREATE INDEX client_account_account_id_idx ON client_account(account_id);
+            CREATE INDEX client_account_client_id_idx ON client_account(client_id);
+
+            CREATE INDEX counteragent_owner_id_idx ON counteragent(owner_id);
+            CREATE INDEX counteragent_account_id_idx ON counteragent(account_id);
+
+            CREATE INDEX transaction_owner_id_idx ON transaction(owner_id);
+            CREATE INDEX transaction_to_account_id_idx ON transaction(to_account_id);
+            CREATE INDEX transaction_from_account_id_idx ON transaction(from_account_id);
+
+            CREATE INDEX payment_transaction_id_idx ON payment(transaction_id);
+            CREATE INDEX payment_counteragent_id_idx ON payment(counteragent_id);
+
+            CREATE INDEX tax_payment_id_idx ON tax(payment_id);
+
+            CREATE INDEX expected_payment_payment_id_idx ON expected_payment(payment_id);
+            CREATE INDEX expected_payment_owner_id_idx ON expected_payment(owner_id);
+            CREATE INDEX expected_payment_counteragent_id_idx ON expected_payment(counteragent_id);
+            CREATE INDEX expected_payment_contract_id_idx ON expected_payment(contract_id);
+
+            CREATE INDEX contract_counteragent_id_idx ON contract(counteragent_id);
+
+            CREATE INDEX notification_client_id_idx ON notification(client_id);
         </sql>
     </changeSet>
 </databaseChangeLog>

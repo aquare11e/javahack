@@ -1,6 +1,6 @@
 package xyz.walkingcoders.javahack.db;
 
-public enum TransactionType {
+public enum PaymentDirection {
     INCOMING,
-    OUTGING
+    OUTGOING
 }
