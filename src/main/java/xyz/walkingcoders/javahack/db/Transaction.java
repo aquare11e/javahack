@@ -1,13 +1,22 @@
 package xyz.walkingcoders.javahack.db;
 
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@NoArgsConstructor
+@Getter
+@Setter
+@Table(name = "transaction")
 public class Transaction {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @ManyToOne
     private Client owner;
@@ -27,4 +36,6 @@ public class Transaction {
 
     @ManyToOne
     private Account to;
+
+
 }

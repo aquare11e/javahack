@@ -1,12 +1,21 @@
 package xyz.walkingcoders.javahack.db;
 
-import javax.persistence.Column;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "notification")
 public class Notification {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @OneToMany
     private Client client;

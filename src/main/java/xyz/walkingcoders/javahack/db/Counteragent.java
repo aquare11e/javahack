@@ -1,13 +1,19 @@
 package xyz.walkingcoders.javahack.db;
 
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "counteragent")
 public class Counteragent {
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @Column(name = "name")
     private String name;

@@ -1,12 +1,21 @@
 package xyz.walkingcoders.javahack.db;
 
-import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
 import java.util.Set;
 
+@NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "client")
 public class Client {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -31,4 +40,6 @@ public class Client {
 
     @Column(name = "inn")
     private String inn;
+
+
 }
