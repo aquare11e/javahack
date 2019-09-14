@@ -191,3 +191,98 @@ header {
     margin-left: 700px;
   }
 }
+
+body {
+  overflow-x: hidden;
+  background: rgb(238, 227, 227);
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  font-family: 'Raleway', sans-serif;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {    /*ширина столбца сайдбара */
+  width: 9rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+  font-family: 'Raleway', sans-serif;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+
+  #navbarSupportedContent {
+      height: 70px;
+  }
+
+  .logotype {
+    height: 86px;
+  }
+
+  .logotype img {
+      margin: auto;
+      display: block;
+}
+
+  .logo {
+      width:80px;
+      height: 80px;
+      padding-left: 5px auto;
+      margin: 20 auto;
+  }
+
+
+  .list-group list-group-flush {
+      margin-left: 5px;
+  }
+
+  .container-fluid {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 400;
+    
+  }
+  
+
+  .lkbutton {
+    margin-top: 30px;
+    margin-left: 350px;
+    padding-top: 20px;
+    width: 600px;
+    text-align: center;
+  }
+  .lkbutton2 {
+    margin-top: 30px;
+    margin-left: 550px;
+    padding-top: 20px;
+    width: 200px;
+  }
+

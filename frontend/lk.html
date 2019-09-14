@@ -11,91 +11,10 @@
   <title>Личный кабинет</title>
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-  <style>
-  /*!
- * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
- */
-body {
-  overflow-x: hidden;
-  background-image: url('fon.png');
-}
-
-#sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
-  font-family: 'Raleway', sans-serif;
-}
-
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
-}
-
-#sidebar-wrapper .list-group {    /*ширина столбца сайдбара */
-  width: 9rem;
-}
-
-#page-content-wrapper {
-  min-width: 100vw;
-  font-family: 'Raleway', sans-serif;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
-}
-
-  #sidebar-wrapper {
-    margin-left: 0;
-  }
-
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
-  }
-
-  #wrapper.toggled #sidebar-wrapper {
-    margin-left: -15rem;
-  }
-
-  #navbarSupportedContent {
-      height: 70px;
-  }
-
-  .logo {
-      width:63px;
-      padding-left: 5px auto;
-  }
-
-  .list-group list-group-flush {
-      margin-left: 5px;
-  }
-
-  .container-fluid {
-    margin-left: 400;
-  }
-
-  .lkbutton {
-    margin-top: 30px;
-    margin-left: 500px;
-    padding-top: 20px;
-    width: 200px;
-    text-align: center;
-  }
-  .lkbutton2 {
-    margin-top: 30px;
-    margin-left: 500px;
-    padding-top: 20px;
-    width: 200px;
-  }
-  </style>
+  
 </head>
 
 <body>
@@ -104,9 +23,11 @@ body {
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-    <img class="logo" src="logolk.jpeg">
+      <div class="logotype"</div>
+        <img class="logo" src="logolk.jpeg">
+      </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Кредиты</a>
+        <a href="proverkakontragenta.html" class="list-group-item list-group-item-action bg-light">Проверка контрагента</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Счета</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Цели</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Вклады</a>
@@ -125,22 +46,25 @@ body {
           <span class="navbar-toggler-icon"></span>
         </button>
 
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <button type="submit" class="lkbutton2">Вход</button>
           </ul>
         </div>
       </nav>
-      <div class="container-fluid">
+      <!--<div class="container-fluid">
         <div class="knopkilk">
-          <input type="password" class="lkbutton"  placeholder="напиши"><br>
-          <button type="submit" class="lkbutton2">Нажми</button>
+          <input id="inn" type="text" required class="lkbutton"  placeholder="Укажите ИНН контрагента"><br>
+          <button type="submit" class="lkbutton2" onclick="checkInn()">Проверить контрагента</button>
         </div>
       </div>
     </div>
   </div>
+  -->
 
   <!-- Bootstrap core JavaScript -->
+    <script src="lk.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
