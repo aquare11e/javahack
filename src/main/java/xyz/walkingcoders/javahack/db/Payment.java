@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @Getter
@@ -22,6 +24,7 @@ public class Payment {
     private PaymentType type;
 
     @OneToOne
+    @JoinColumn(name = "transaction_id")
     private Transaction transaction;
 
     @OneToMany
@@ -30,7 +33,11 @@ public class Payment {
     @OneToMany
     private Counteragent counteragent;
 
-    private Double taxValue;
+    @Column(name = "last_payment_day")
+    private LocalDate lastPaymentDay;
+
+    private Double taxAmount;
+
     private BigDecimal taxSum;
 
 

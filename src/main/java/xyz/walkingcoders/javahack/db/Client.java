@@ -26,7 +26,7 @@ public class Client {
     @Column(name = "middle_name")
     private String middleName;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Set<Account> accounts;
 
     @Column(name = "login")
