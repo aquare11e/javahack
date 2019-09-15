@@ -1,0 +1,335 @@
+@font-face {
+    font-family: "Default";
+    src: url("../fonts/futurabookc.otf");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: Default;
+  }
+  
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: black;
+  }
+  
+  body {
+    height: 100vh;
+    background-image: url("../img/1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    overflow: hidden;
+  }
+  
+  .yellow-btn {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffed00;
+    color: #000;
+    box-sizing: content-box;
+    transition: all .2s;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+  
+  .yellow-btn {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffed00;
+    color: #000;
+    box-sizing: content-box;
+    transition: all .2s;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+  
+  #knopka1 {
+    margin-left: 100px;
+  }
+  
+  
+  .yellow-btn:hover {
+    background-color: #000;
+    color: #ffed00;
+  }
+  
+  .yellow-btn:hover a {
+    transition: all .2s;
+    color: #ffed00;
+  }
+  
+  header {
+    margin-bottom: 70px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Default;
+  }
+  
+  .header_navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header_navbar a {
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+    background-color: transparent;
+    padding-bottom: 5px;
+    margin: 0 5px;
+  }
+  
+  .header_navbar a.active {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+  
+  .header_navbar a:hover,
+  .header_navbar a:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+  }
+  
+  .header_button h1 {
+    margin-bottom: 5px;
+  }
+  
+  .header_button a {
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.25rem 1.875rem;
+    transition: background-color .2s,color .2s;
+    border: 0 none;
+    line-height: 1.2;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    cursor: pointer;
+    padding: 1.25rem 1.875rem;
+    position: relative;
+    padding-left: 3.125rem;
+    background-color: #000;
+    color: #ffed00;
+  }
+  
+  .header_button a:hover {
+    background-color: #ffed00;
+    color: #000;
+  }
+  
+  .header_button a svg {
+    width: 1.3125rem;
+    height: 1.3125rem;
+    display: inline-block;
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    left: 1.125rem;
+    fill: #ffed00;
+    transition: fill .2s;
+    overflow: hidden;
+  }
+  
+  .info {
+    margin: 0 0 50px 0;
+  
+    font-family: Default;
+  }
+  
+  .info_content {
+    position: relative;
+    left: 70%;
+    transform: translate(-50%, 0);
+    max-width: 500px;
+  }
+  
+  .info_content h2 {
+    font-size: 1.4em;
+  }
+  
+  .info_btn {
+    margin-top: 10px;
+  }
+  
+  .info_btn a {
+    color: black;
+  }
+  
+  .mode {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin: 0;
+    font-family: Default;
+  }
+  
+  @media (max-width: 800px) {
+    .header_button {
+      margin-top: 10px;
+    }
+    .info {
+      justify-content: center;
+      margin-left: 800px;
+    }
+    .info_content {
+      margin-left: 700px;
+    }
+  }
+  
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {    /*ширина столбца сайдбара */
+    width: 9rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  
+    #navbarSupportedContent {
+        height: 70px;
+    }
+  
+    .logotype {
+      height: 86px;
+    }
+  
+    .logotype img {
+        margin: auto;
+        display: block;
+  }
+  
+    .logo {
+        width:90%;
+        height: 100%;
+        padding-left: 5px auto;
+        margin: 20 auto;
+    }
+  
+  
+    .list-group list-group-flush {
+        margin-left: 5px;
+    }
+  
+    .container-fluid {
+      margin-top: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-left: 400;
+      
+    }
+    
+  
+    .lkbutton {
+      margin-top: 30px;
+      margin-left: 350px;
+      padding-top: 20px;
+      width: 600px;
+      text-align: center;
+      opacity: 0.1;
+  
+    }
+    .lkbutton2 {
+      margin-top: 30px;
+      margin-left: 550px;
+      padding-top: 20px;
+      width: 200px;
+      border-radius: 15PX;
+      opacity: 0.8;
+    }
+  
+    .proverka-kontragent {
+      display: block;
+      margin-top: 20px;
+      width: 900px;
+      margin-left: 370px;
+    }
+  
+  
+    /*калькулятор из файла calc.html */
+   .container {
+      display: inline-block;
+      width: 500px;
+      height: 300px;
+      margin-left:500px;
+      margin-top: 100px;
+    }
+
+    #alert alert-success {
+      margin-left: 100px;
+      margin-bottom: 50px;
+    }
+
+    #calc_button {
+      background: yellow;
+      color: black;
+      margin-left:120px;
+      margin-top: 100px;
+    }
+
+    #re_calc_button {
+      background: yellow;
+      color: black;
+      margin-left:100px
+    }
+
+    .calc_field{
+      display: block;
+      width: 700px;
+      background: #ffed00;
+      opacity: 0.7;
+      color: black;
+    }
+
+    .mt-2 {
+      color: black;
+      text-align: center;
+      text-align: -webkit-center;
+    }

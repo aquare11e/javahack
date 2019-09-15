@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/counteragent")
+@RequestMapping("/api/counteragent")
 public class CounteragentRestController {
     private final CounteragentService counteragentService;
 

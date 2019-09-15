@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Стань самозанятым вместе с Райффайзенбанк</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/cs-select.css"/>
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-border.css"/>
+    <link rel="shortcut icon" href="https://www.raiffeisen.ru/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/contragents.app.css">
+
+</head>
+
+
+<body>
+
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="logotype"
+    </div>
+    <!-- <img class="logo" src="logolk.jpeg">-->
+    <img class="logo" src="./img/logo.svg">
+</div>
+<div class="list-group list-group-flush">
+    <a href="analiz.app.html" class="list-group-item list-group-item-action bg-light">Анализ контрагента</a>
+    <a href="calculate.app.html" class="list-group-item list-group-item-action bg-light">Калькулятор налога</a>
+    <a href="contragents.app.html" class="list-group-item list-group-item-action bg-light">Контрагенты</a>
+    <a href="operations.app.html" class="list-group-item list-group-item-action bg-light">Операции</a>
+    <a href="partnership.app.html" class="list-group-item list-group-item-action bg-light">Партнёрская программа</a>
+</div>
+</div>
+<!-- /#sidebar-wrapper -->
+
+<!-- Page Content -->
+<div id="page-content-wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <img style="width: 50px;margin-right: 30px;" src="./img/user.svg">
+            </ul>
+        </div>
+    </nav>
+    <div class="tab">
+        <table class="table table-border table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Название контрагента</th>
+                <th scope="col">Контактное лицо</th>
+                <th scope="col">ИНН</th>
+                <th scope="col">Тип контрагента</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+        <a class="yellow-btn info_btn" href="#openModal" data-toggle="modal">Регистрация контрагента</a>
+
+        <div id="openModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Регистрация контрагента</h3>
+                        <a href="#close" title="Close" class="close" data-dismiss="modal">×</a>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-el">
+                            <input type="text" class="form-control" id="c_name" placeholder="Название контрагента">
+                        </div>
+                        <div class="form-el">
+                            <input type="text" class="form-control" id="c_contact" placeholder="Контактное лицо">
+                        </div>
+                        <div class="form-el">
+                            <input type="text" class="form-control" id="c_account" placeholder="Реквизиты">
+                        </div>
+                        <div class="form-el">
+                            <input type="text" class="form-control" id="c_inn" placeholder="ИНН">
+                        </div>
+                        <div class="form-el">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="i_type" value="INDIVIDUAL">ФЛ
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="l_type" value="JURIDICAL">ЮЛ
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-el">
+                            <button type="button" class="btn btn-secondary" onclick="registerCA()">Зарегистрировать контрагента</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <script src="http://code.jquery.com/jquery-3.3.1.js"
+                    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                    crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                    crossorigin="anonymous"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/classie.js"></script>
+            <script src="js/selectFx.js"></script>
+            <script>
+                (function () {
+                    [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+                        new SelectFx(el);
+                    });
+                })();
+            </script>
+            <script src="js/jquery.maskedinput.min.js"></script>
+            <script src="js/contragents.app.js" type="text/javascript"></script>
+</body>
+</html>
+
