@@ -1,6 +1,6 @@
 package xyz.walkingcoders.javahack.db;
 
-public enum CounteragentType {
-    LEGAL,
+public enum CounteragentLegalType {
+    JURIDICAL,
     INDIVIDUAL
 }

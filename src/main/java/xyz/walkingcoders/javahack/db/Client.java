@@ -3,6 +3,7 @@ package xyz.walkingcoders.javahack.db;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +22,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Setter
 @Entity
 @Table(name = "client")
-public class Client {
+public class Client  {
 
     @Id
     @GeneratedValue(strategy=SEQUENCE, generator = "client_id_seq")
@@ -37,7 +38,7 @@ public class Client {
     @Column(name = "middle_name")
     private String middleName;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
         name = "client_account",
         joinColumns = { @JoinColumn(name = "client_id") },
