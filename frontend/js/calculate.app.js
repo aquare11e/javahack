@@ -14,5 +14,5 @@ function calcTax() {
 }
 
 function calcAnotherTax() {
-    document.location="calc.html"
+    document.location="calculate.app.html"
 }
