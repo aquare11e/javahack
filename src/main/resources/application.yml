@@ -9,6 +9,11 @@ spring:
       ddl-auto: validate
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: false
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
   liquibase:
     change-log: classpath:db/changelog-master.xml
 fns-api: 6a50edb7e305c8e1f2abecf77325656c1eeb21f7
