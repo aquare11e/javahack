@@ -1,15 +1,14 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgredb/javahack
+    url: jdbc:postgresql://infra.walkingcoders.xyz/javahack
     username: dbuser
     password: password
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: validate
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: false
   liquibase:
-    change-log: classpath:changelog/changelog.yaml
-
-
+    change-log: classpath:db/changelog-master.xml
+fns-api: 6a50edb7e305c8e1f2abecf77325656c1eeb21f7
