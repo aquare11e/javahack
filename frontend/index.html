@@ -1,731 +1,98 @@
+
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Пример на bootstrap 4: Одностраничный шаблон для создания простых и красивых домашних страниц. Версия v4.0.0">
-    <meta name="author" content="">
+   <title>Стань самозанятым вместе с Райффайзенбанк</title>
 
-    <!-- Bootstrap CSS -->
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-skin-border.css" />
+    <link rel="shortcut icon" href="https://www.raiffeisen.ru/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/index.js"></script>
+    
+  </head>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="../../../../favicon.ico">
-
-    <title>Стань самозанятым вместе с Райффайзенбанк!</title>
-</head>
-
-<body>
+  <body>
 
     <header>
-        <div class="header_logo"><img src="./logo.svg" alt="Райфазер"></div>
-        <div class="header_button">
-            <a data-account="raiffeisen-online" class="button-invert button-with-icon banking g-premium-hide banking__btn" href="login.html">
-                <svg class="banking__svg" width="32" height="32" viewBox="0 0 22 19">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/common/new/icons/icons.svg#icon-enter"></use>
-          </svg>
-                <span href="login.html"class="button-text">Интернет-банк</span>
-            </a>
-        </div>
+      <div class="header_logo"><img src="../JAVA HACK/img/logo.svg" alt="Банк для бизнеса"></div>
+      
     </header>
 
     <section class="info">
-        <div class="info_content">
-            <h2>
-                Станьте самозанятым вместе с Райффайзенбанк всего за 5 минут!</h2>
-            и получите неограниченный доступ к сервису для автоматизации бизнеса всего за 0 руб!
-            
-            <li>Анализ контрагентов</li>
-            <li>Калькулятор налога</li>
-            <li>Удобная CRM система</li>
-            <li>Cashback от уплаченных налогов</li>
-            <li>Автоматизация процесса уплаты налога</li>
-            <div id="knopka1" class="yellow-btn info_btn"><a href="#">Стать самозанятым</a></div>
-        </div>
+      <div class="info_content">
+        <h2>
+          Станьте самозанятым вместе с Райффайзенбанк </h2>
+     <h3> и получите доступ к системе по автоматизации бизнеса в подарок!</h3>
+     <br>
+      
+     <h4 style="text-align: left">• Анализ контрагентов</h4>
+      <h4 style="text-align: left">• Калькулятор налога</h4>
+      <h4 style="text-align: left">• Удобная CRM система</h4>
+      <h4 style="text-align: left">• Cashback от уплаченных налогов</h4>
+      <h4 style="text-align: left">• Автоматизация процесса уплаты налога</h4>
+
+        <div class="yellow-btn info_btn" href="#openModal" data-toggle="modal">Стать самозанятым</div>
+        
+      </div>
+          <div id="openModal" class="modal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h3 class="modal-title">Название</h3>
+                          <a href="#close" title="Close" class="close" data-dismiss="modal" >×</a>
+                      </div>
+                      <div class="modal-body">
+                          <div class="form-el">
+                          <label>Имя</label>
+                          <input type="text" name="name" required="">
+                          </div>
+                          <div class="form-el">
+                              <label>Телефон</label>
+                              <input type="tel" name="phone" id="take_pdf_form_phone" required="">
+                            </div>
+                            <div class="form-el">
+                          <a href="main.app.html"> <input type="submit" value="Стать самозанятым" class="submit""></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </section>
 
-    <section class="mode">
-        <a id="knopka2"class="yellow-btn" href="#" data-toggle="modal" data-target="#modal">Подойдет ли мне этот режим?</a>
+    <section class="mode">      
+      <a class="yellow-btn" href="#" data-toggle="modal" data-target="#modal">Подойдет ли мне этот режим?</a>
     </section>
 
-
-    <!-- Modal -->
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="img/logo_home_service_original_500_grey.png" />
-                    <p>Сэкономьте до 100 тысяч рублей на ремонте<br> + получите гарантированный подарок</p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-
-                    <div id="modal-step1">
-
-                        <div class="step-header">
-                            <h3><span class="text-center align-middle">1</span> Плитка</h3>
-                        </div>
-                        <div class="row step-blocks">
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_2_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input class="c_button show" id="napolnaya" name="napolnaya" type="checkbox">
-                                            <label for="napolnaya">Напольная</label>
-                                        </div>
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                                    </div>
-                                                    <input type="number" class="form-control form-control-sm" name="napolnaya-squere" placeholder="Укажите площадь">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text">м<sup>2</sup></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input class="r_button" id="napolnaya-zamer" name="napolnaya-zamer" type="checkbox">
-                                                <label for="napolnaya-zamer">Нужен замер</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-
-                                        <div class="form-group">
-                                            <input class="c_button show" id="nastennaya" name="nastennaya" type="checkbox">
-                                            <label for="nastennaya">Настенная</label>
-                                        </div>
-
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                                    </div>
-                                                    <input type="number" class="form-control form-control-sm" name="nastennaya-squere" placeholder="Укажите площадь">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text">м<sup>2</sup></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input class="r_button" id="nastennaya-zamer" name="nastennaya-zamer" type="checkbox">
-                                                <label for="nastennaya-zamer">Нужен замер</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step-buttons">
-                            <button class="btn btn-primary disabled">Следующий шаг ></button>
-                            <button class="btn btn-outline-secondary to-the-next">Пропустить этот шаг</button>
-                        </div>
-
-                    </div>
-                    <!--/#modal-step1-->
-
-                    <div id="modal-step2" class="d-none">
-
-                        <div class="step-header">
-                            <h3><span class="text-center">2</span> Напольное покрытие</h3>
-                        </div>
-                        <div class="row step-blocks">
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_2_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input class="c_button show" id="laminat" name="laminat" type="checkbox">
-                                            <label for="laminat">Ламинат</label>
-                                        </div>
-
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                                    </div>
-                                                    <input type="number" class="form-control form-control-sm" name="laminat-squere" placeholder="Укажите площадь">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text">м<sup>2</sup></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input class="r_button" id="laminat-zamer" name="laminat-zamer" type="checkbox">
-                                                <label for="laminat-zamer">Нужен замер</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input class="c_button show" id="parket" name="parket" type="checkbox">
-                                            <label for="parket">Паркет</label>
-                                        </div>
-
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                                    </div>
-                                                    <input type="number" class="form-control form-control-sm" name="parket-squere" placeholder="Укажите площадь">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text">м<sup>2</sup></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input class="r_button" id="parket-zamer" name="parket-zamer" type="checkbox">
-                                                <label for="parket-zamer">Нужен замер</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step-buttons">
-                            <button class="btn btn-primary disabled">Следующий шаг ></button>
-                            <button class="btn btn-outline-secondary to-the-next">Пропустить этот шаг</button>
-                        </div>
-
-                    </div>
-                    <!--/#modal-step2-->
-
-                    <div id="modal-step3" class="d-none">
-
-                        <div class="step-header">
-                            <h3><span class="text-center">3</span> Двери</h3>
-                        </div>
-                        <div class="row step-blocks">
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_2_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input class="c_button show" id="vhodnye" name="vhodnye" type="checkbox">
-                                            <label for="vhodnye">Входные</label>
-                                        </div>
-
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <input type="number" class="form-control form-control-sm" id="vhodnye-dvery" name="vhodnye-number" placeholder="Укажите количество дверей">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input class="c_button show" id="mezhkomnatnye" name="mezhkomnatnye" type="checkbox">
-                                            <label for="mezhkomnatnye">Межкомнатные</label>
-                                        </div>
-
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <input type="number" class="form-control form-control-sm" id="mezhkomnatnye-dvery" name="mezhkomnatnye-number" placeholder="Укажите количество дверей">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step-buttons">
-                            <button class="btn btn-primary disabled">Следующий шаг ></button>
-                            <button class="btn btn-outline-secondary to-the-next">Пропустить этот шаг</button>
-                        </div>
-
-                    </div>
-                    <!--/#modal-step3-->
-
-                    <div id="modal-step4" class="d-none">
-
-                        <div class="step-header">
-                            <h3><span class="text-center">4</span> Обои</h3>
-                        </div>
-                        <div class="row step-blocks">
-
-                            <div class="col-lg-6 col-md-7 col-sm-12">
-                                <div class="card">
-                                    <div class="card-body">
-
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                            </div>
-                                            <input type="number" class="form-control" name="walls-squere" placeholder="Укажите площадь">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">м<sup>2</sup></span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-5 col-sm-12">
-                                <div class="card">
-                                    <div class="card-body pt-md-4 pt-0">
-
-                                        <input class="r_button" id="walls-zamer" name="walls-zamer" type="checkbox">
-                                        <label for="walls-zamer">Нужен замер</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step-buttons">
-                            <button class="btn btn-primary disabled">Следующий шаг ></button>
-                            <button class="btn btn-outline-secondary to-the-next">Пропустить этот шаг</button>
-                        </div>
-
-                    </div>
-                    <!--/#modal-step4-->
-
-                    <div id="modal-step5" class="d-none">
-
-                        <div class="step-header">
-                            <h3><span class="text-center">5</span> Теплый пол</h3>
-                        </div>
-                        <div class="row step-blocks">
-
-                            <div class="col-lg-6 col-md-7 col-sm-12">
-                                <div class="card">
-                                    <div class="card-body pb-0">
-
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                            </div>
-                                            <input type="number" class="form-control" name="floor-squere" placeholder="Укажите площадь">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">м<sup>2</sup></span>
-                                            </div>
-                                        </div>
-
-                                        <br>
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-5 col-sm-12">
-                                <div class="card">
-                                    <div class="card-body pt-md-4 pt-0">
-
-                                        <input class="r_button" id="floor-zamer" name="floor-zamer" type="checkbox">
-                                        <label for="floor-zamer">Нужен замер</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="card">
-                                    <div class="card-body pt-0">
-                                        <input class="r_button" id="thermo-zamer" name="thermo-zamer" type="checkbox">
-                                        <label for="thermo-zamer">Нужны терморегуляторы</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step-buttons">
-                            <button class="btn btn-primary disabled">Следующий шаг ></button>
-                            <button class="btn btn-outline-secondary to-the-next">Пропустить этот шаг</button>
-                        </div>
-
-                    </div>
-                    <!--/#modal-step5-->
-
-                    <div id="modal-step6" class="d-none">
-
-                        <div class="step-header">
-                            <h3><span class="text-center">6</span> Сантехника</h3>
-                        </div>
-                        <div class="row step-blocks">
-
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_2_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <input class="c_button" id="sink" name="sink" type="checkbox">
-                                        <label for="sink">Раковина</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <input class="c_button" id="bathtub" name="bathtub" type="checkbox">
-                                        <label for="bathtub">Ванна</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <input class="c_button" id="toilet" name="toilet" type="checkbox">
-                                        <label for="toilet">Туалет/инсталляция</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <input class="c_button" id="mixer" name="mixer" type="checkbox">
-                                        <label for="mixer">Смесители</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step-buttons">
-                            <button class="btn btn-primary disabled">Следующий шаг ></button>
-                            <button class="btn btn-outline-secondary to-the-next">Пропустить этот шаг</button>
-                        </div>
-
-                    </div>
-                    <!--/#modal-step6-->
-
-                    <div id="modal-step7" class="d-none">
-
-                        <div class="step-header">
-                            <h3><span class="text-center">7</span> Шумоизоляция</h3>
-                        </div>
-                        <div class="row step-blocks">
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_2_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input class="c_button show" id="ceiling" name="ceiling" type="checkbox">
-                                            <label for="ceiling">Потолок</label>
-                                        </div>
-
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <select class="cs-select cs-skin-border">
-                                <option value="" disabled selected>Выберете тип шума</option>
-                                <option value="structural">Структурный</option>
-                                <option value="air">Воздушный</option>
-                                <option value="impact">Ударный</option>
-                              </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                                    </div>
-                                                    <input type="number" class="form-control form-control-sm" name="ceiling-squere" placeholder="Укажите площадь">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text">м<sup>2</sup></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input class="r_button" id="ceiling-zamer" name="ceiling-zamer" type="checkbox">
-                                                <label for="ceiling-zamer">нужен замер</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input class="c_button show" id="floor-sound" name="floor-sound" type="checkbox">
-                                            <label for="floor-sound">Пол</label>
-                                        </div>
-
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <select class="cs-select cs-skin-border">
-                                <option value="" disabled selected>Выберете тип шума</option>
-                                <option value="structural">Структурный</option>
-                                <option value="air">Воздушный</option>
-                                <option value="impact">Ударный</option>
-                              </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                                    </div>
-                                                    <input type="number" class="form-control form-control-sm" name="floor-sound-squere" placeholder="Укажите площадь">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text">м<sup>2</sup></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input class="r_button" id="floor-sound-zamer" name="floor-sound-zamer" type="checkbox">
-                                                <label for="floor-sound-zamer">нужен замер</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 mx-auto">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <input class="c_button show" id="walls-sound" name="walls-sound" type="checkbox">
-                                            <label for="walls-sound">Стены</label>
-                                        </div>
-
-                                        <div class="more-settings d-none">
-                                            <div class="form-group">
-                                                <select class="cs-select cs-skin-border">
-                                <option value="" disabled selected>Выберете тип шума</option>
-                                <option value="structural">Структурный</option>
-                                <option value="air">Воздушный</option>
-                                <option value="impact">Ударный</option>
-                              </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text"><img src="img/ruler.svg" /></span>
-                                                    </div>
-                                                    <input type="number" class="form-control form-control-sm" name="walls-sound-squere" placeholder="Укажите площадь">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text">м<sup>2</sup></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input class="r_button" id="walls-sound-zamer" name="walls-sound-zamer" type="checkbox">
-                                                <label for="walls-sound-zamer">Нужен замер</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step-buttons">
-                            <button class="btn btn-primary disabled">Следующий шаг ></button>
-                            <button class="btn btn-outline-secondary to-the-next">Пропустить этот шаг</button>
-                        </div>
-
-                    </div>
-                    <!--/#modal-step7-->
-
-                    <div id="modal-step8" class="d-none">
-
-                        <div class="step-header">
-                            <h3><span class="text-center">8</span> Выберете Ваш подарок</h3>
-                        </div>
-                        <div class="row step-blocks">
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_2_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <input class="c_button" id="switch" name="present" type="radio" value="switch">
-                                        <label for="switch">Комплект выключателей</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <input class="c_button" id="stretch-ceiling" name="present" type="radio" value="stretch-ceiling">
-                                        <label for="stretch-ceiling">Натяжной потолок</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 mx-auto">
-                                <div class="card">
-                                    <img class="card-img-top" src="img/modal-img/Variant_Copy_3_2x.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <input class="c_button" id="door" name="present" type="radio" value="door">
-                                        <label for="door">Межкомнатная дверь</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="step-buttons">
-                            <button class="btn btn-primary disabled last_step_buttons">Следующий шаг ></button>
-                            <button class="btn btn-outline-secondary to-the-next last_step_buttons">Пропустить этот шаг</button>
-                        </div>
-
-                    </div>
-                    <!--/#modal-step8-->
-
-                    <div id="modal-step9" class="d-none">
-                        <form autocomplete="off" novalidate id="brif_form">
-                            <div class="step-header">
-                                <h3><span class="text-center">9</span> Спасибо за ответы. Оставьте контакты и получите результаты расчета
-                                </h3>
-                            </div>
-                            <div class="row step-blocks">
-
-                                <div class="col-lg-8">
-                                    <p>+гарантированный подарок</p>
-                                    <p id="changable-text">Введите номер телефона, мы вышлем смс с результатами</p>
-
-                                    <div class="input-group phone user_phone">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><img src="img/call-answer.svg" /></span>
-                                        </div>
-                                        <input type="tel" class="form-control user-phone" name="phone" placeholder="Введите Ваш телефон" id="user_phone">
-                                    </div>
-
-                                    <div class="input-group email d-none">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><img src="img/envelope.svg" /></span>
-                                        </div>
-                                        <input type="email" class="form-control" name="email" placeholder="Введите Ваш E-mail">
-                                    </div>
-
-                                </div>
-                                <!--M-1-->
-                                <input name="url" type="text" style="display:none" value="" />
-                                <input name="floor_tile" type="text" style="display:none" value="" />
-                                <input name="floor_tile_s" type="text" style="display:none" value="" />
-                                <input name="floor_tile_m" type="text" style="display:none" value="" />
-                                <input name="wall_tile" type="text" style="display:none" value="" />
-                                <input name="wall_tile_s" type="text" style="display:none" value="" />
-                                <input name="wall_tile_m" type="text" style="display:none" value="" />
-                                <!--M-2-->
-                                <input name="laminate" type="text" style="display:none" value="" />
-                                <input name="laminate_s" type="text" style="display:none" value="" />
-                                <input name="laminate_m" type="text" style="display:none" value="" />
-                                <input name="parquet" type="text" style="display:none" value="" />
-                                <input name="parquet_s" type="text" style="display:none" value="" />
-                                <input name="parquet_m" type="text" style="display:none" value="" />
-                                <!--M-3-->
-                                <input name="ent_doors" type="text" style="display:none" value="" />
-                                <input name="ent_doors_n" type="text" style="display:none" value="" />
-                                <input name="int_doors" type="text" style="display:none" value="" />
-                                <input name="int_doors_n" type="text" style="display:none" value="" />
-                                <!--M-4-->
-                                <input name="wallpaper_n" type="text" style="display:none" value="" />
-                                <input name="wallpaper_m" type="text" style="display:none" value="" />
-                                <!--M-5-->
-                                <input name="thermo_floor_s" type="text" style="display:none" value="" />
-                                <input name="thermo_floor_m" type="text" style="display:none" value="" />
-                                <input name="thermo_switch" type="text" style="display:none" value="" />
-                                <!--M-6-->
-                                <input name="sink_i" type="text" style="display:none" value="" />
-                                <input name="bath_tube_i" type="text" style="display:none" value="" />
-                                <input name="toilet_i" type="text" style="display:none" value="" />
-                                <input name="mixers_i" type="text" style="display:none" value="" />
-                                <!--M-7-->
-                                <input name="ceiling_sound" type="text" style="display:none" value="" />
-                                <input name="ceiling_sound_type" type="text" style="display:none" value="" />
-                                <input name="ceiling_sound_s" type="text" style="display:none" value="" />
-                                <input name="ceiling_sound_m" type="text" style="display:none" value="" />
-                                <input name="floor_sound" type="text" style="display:none" value="" />
-                                <input name="floor_sound_type" type="text" style="display:none" value="" />
-                                <input name="floor_sound_s" type="text" style="display:none" value="" />
-                                <input name="floor_sound_m" type="text" style="display:none" value="" />
-                                <input name="wall_sound" type="text" style="display:none" value="" />
-                                <input name="wall_sound_type" type="text" style="display:none" value="" />
-                                <input name="wall_sound_s" type="text" style="display:none" value="" />
-                                <input name="wall_sound_m" type="text" style="display:none" value="" />
-                                <!--M-8-->
-                                <input name="switchers_p" type="text" style="display:none" value="" />
-                                <input name="stretch_ceiling_p" type="text" style="display:none" value="" />
-                                <input name="int_door_p" type="text" style="display:none" value="" />
-                            </div>
-                            <div class="step-buttons">
-                                <input class="btn btn-primary" id="brif_form_send" type="submit" value="Получить результат расчета →" />
-                                <a href="#" class="btn btn-outline-secondary change-to-email">Получить результаты на Email</a>
-                                <a href="#" class="btn btn-outline-secondary change-to-phone d-none">Получить результаты на телефон</a>
-                            </div>
-                        </form>
-                    </div>
-                    <!--/#modal-step9-->
-
-                </div>
-                <div class="modal-footer">
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                        <div class="upper-layer w-100 text-center question_number_text">Осталось ответить на <span id="question_number">7 вопросов</span>, чтобы получить гарантированный подарок</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/selectFx.js"></script>
-    <script>
-        (function() {
-            [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function(el) {
-                new SelectFx(el);
+       
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/selectFx.js"></script>
+        <script>
+          (function () {
+            [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+              new SelectFx(el);
             });
-        })();
-    </script>
-    <script src="js/modal-slider.js"></script>
-    <script src="js/next-step.js"></script>
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/ajax_request.js"></script>
-    <script src="js/form-send.js"></script>
+          })();
+        </script>
+      
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/ajax_request.js"></script>
+       
 
-
-</body>
-
+    
+  </body>
 </html>
