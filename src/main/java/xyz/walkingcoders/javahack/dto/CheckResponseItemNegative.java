@@ -1,23 +1,27 @@
 package xyz.walkingcoders.javahack.dto;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 
 public class CheckResponseItemNegative {
-    @JsonAlias("Статус")
+    @JsonProperty("Статус")
     String status;
 
-    @JsonAlias("ИсклИзРеестраМСП")
+    @JsonProperty("ИсклИзРеестраМСП")
     String excludedMsp;
 
-    @JsonAlias("РегНедавно")
+    @JsonProperty("РегНедавно")
     String newbee;
 
-    @JsonAlias("РеестрМассРук")
+    @JsonProperty("РеестрМассРук")
     String massDirector;
 
-    @JsonAlias("РеестрМассУчр")
+    @JsonProperty("РеестрМассУчр")
     String massOwner;
 
-    @JsonAlias("Текст")
+    @JsonProperty("Текст")
     String text;
 }

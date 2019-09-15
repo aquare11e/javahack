@@ -13,13 +13,12 @@ import xyz.walkingcoders.javahack.integration.InnChecker;
 
 @Service
 public class InnCheckerService {
-    @Value("${fns-api}") //todo maybe #
+    @Value("${fns-api}")
     private String key;
 
     public Check check(String inn){
         InnChecker checker= Feign.builder()
                 .decoder(new JacksonDecoder())
-                .encoder(new JacksonEncoder())
                 .target(InnChecker.class, "https://api-fns.ru");
         Check check = checker.check(inn, key);
         System.out.println(check);
@@ -29,10 +28,7 @@ public class InnCheckerService {
     public Egr egr(String inn){
         InnChecker checker=Feign.builder()
                 .decoder(new JacksonDecoder())
-                .encoder(new JacksonEncoder())
                 .target(InnChecker.class, "https://api-fns.ru");
         return checker.egr(inn,key);
     }
-
-
 }

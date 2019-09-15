@@ -15,8 +15,8 @@ public class IntegrationRestController {
     @RequestMapping("/api/integration/check/{inn}")
     public CheckDetails check(@PathVariable String inn){
         CheckDetails details=new CheckDetails();
-        details.setCheckResponse(innCheckerService.check(inn));
-        details.setEgrResponse(innCheckerService.egr(inn));
+        details.setCheck(innCheckerService.check(inn));
+        details.setEgr(innCheckerService.egr(inn));
         return details;
     }
 }
