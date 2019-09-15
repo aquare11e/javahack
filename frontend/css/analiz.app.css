@@ -296,32 +296,7 @@
     /*калькулятор из файла calc.html */
    .container {
       display: inline-block;
-      width: 500px;
-      height: 300px;
-      margin-left:500px;
-      margin-top: 100px;
+      width: 300px;
     }
-
-    #alert alert-success {
-      margin-left: 100px;
-      margin-bottom: 50px;
-    }
-
-    #calc_button {
-      background: yellow;
-      color: black;
-      margin-left:120px;
-      margin-top: 100px;
-    }
-
-    #re_calc_button {
-      background: yellow;
-      color: black;
-      margin-left:100px
-    }
-
-    #spisok{
-      display: block;
-      width: 700px;
-      background: #ffed00;
-    }
+    
+  
