@@ -315,7 +315,20 @@
     }
 
     .modal {
-      background: yellow;
+      border-radius: 30px;
     }
+
+    .modal-dialog {
+      background: black;
+    }
+
+    .modal-content{
+      background: #F2F5A9;
+      border-radius: 30px;
+    }
+
+
+
+
     
   
