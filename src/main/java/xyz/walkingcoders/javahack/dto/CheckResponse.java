@@ -11,5 +11,5 @@ public class CheckResponse {
     CheckResponseItem legal;
 
     @JsonProperty("ИП")
-    CheckResponse individual;
+    CheckResponseItem individual;
 }
