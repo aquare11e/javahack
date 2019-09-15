@@ -4,7 +4,7 @@ function checkAgent(){
     $.ajax({
         method: "POST",
         async: false,
-        url: "http://localhost:8080/api/integration/check/"+$('#inn').val(),
+        url: document.location.host+":81/api/integration/check/"+$('#inn').val(),
         success: function (data) {
             !!data['check']['items'][0]['ЮЛ']?fillLegal(data):fillIndividual(data);
         },
