@@ -20,7 +20,7 @@
   <body>
 
     <header>
-      <div class="header_logo"><img src="../JAVA HACK/img/logo.svg" alt="Банк для бизнеса"></div>
+      <div class="header_logo"><img src="img/logo.svg" alt="Банк для бизнеса"></div>
       
     </header>
 
@@ -44,20 +44,18 @@
               <div class="modal-dialog">
                   <div class="modal-content">
                       <div class="modal-header">
-                          <h3 class="modal-title">Название</h3>
+                          <h3 class="modal-title">Зарегистрироваться в личный кабинет</h3>
                           <a href="#close" title="Close" class="close" data-dismiss="modal" >×</a>
                       </div>
                       <div class="modal-body">
                           <div class="form-el">
-                          <label>Имя</label>
-                          <input type="text" name="name" required="">
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Введите ваше имя">
                           </div>
                           <div class="form-el">
-                              <label>Телефон</label>
-                              <input type="tel" name="phone" id="take_pdf_form_phone" required="">
+                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Введите телефон">
                             </div>
-                            <div class="form-el">
-                          <a href="main.app.html"> <input type="submit" value="Стать самозанятым" class="submit""></a>
+                            <div class="form-el" formacrtion="main.app.html">
+                                <a class="yellow-btn" href="main.app.html">Отправить</a>
                           </div>
                       </div>
                   </div>
@@ -66,9 +64,6 @@
       </div>
     </section>
 
-    <section class="mode">      
-      <a class="yellow-btn" href="#" data-toggle="modal" data-target="#modal">Подойдет ли мне этот режим?</a>
-    </section>    
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
