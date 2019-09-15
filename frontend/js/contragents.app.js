@@ -18,7 +18,7 @@ $(document).ready(function() {
         beforeSend: function(request){
             request.setRequestHeader('user_id', '1')
         },
-        url: "http://app.walkingcoders.xyz/api/counteragent",
+        url: "http://app.walkingcoders.xyz:81/api/counteragent",
         success:function (data) {
             $(data).each(function(i, v){
                 $('#tbody').append('<tr><td>'+v['name']+'</td>' +
@@ -46,7 +46,7 @@ function registerCA() {
        beforeSend: function (requset) {
            requset.setRequestHeader('user_id', '1')
        },
-        url: "http://app.walkingcoders.xyz/api/counteragent",
+        url: "http://app.walkingcoders.xyz:81/api/counteragent",
         data: ca,
         success: function (data) {
             alert(data);
