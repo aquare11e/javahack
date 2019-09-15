@@ -12,7 +12,15 @@
     <link rel="stylesheet" type="text/css" href="css/cs-skin-border.css" />
     <link rel="shortcut icon" href="https://www.raiffeisen.ru/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/calculate.app.css">
-    <script src="js/app.js"></script>
+    <script src="js/calculate.app.js"></script>
+    <style>
+      .calc_field{
+          display: none;
+      }
+      #re_calc_button{
+          display: none;
+      }
+  </style>
     </head>
     <body>
       
@@ -50,15 +58,67 @@
             </ul>
           </div>
         </nav>
-        <!--<div class="container-fluid">
-          <div class="knopkilk">
-            <input id="inn" type="text" required class="lkbutton"  placeholder="Укажите ИНН контрагента"><br>
-            <button type="submit" class="lkbutton2" onclick="checkInn()">Проверить контрагента</button>
-          </div>
-        </div>
+
+        <div class="container">
+          <div class="row mt-2">
+      <div id= class="alert alert-success">
+          <strong>Расчет суммы налога по договору</strong>
       </div>
-    </div>
-    -->
+          </div>
+          <form>
+          <div class="input-group">
+              <div class="input-group-prepend">
+                  <span class="input-group-text">Размер договора:</span>
+              </div>
+              <input id="contractSum" type="number" required class="form-control"/>
+          </div>
+              <div class="input-group mt-2">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">Тип клиента:</span>
+                  </div>
+                  <select class="form-control" id="clientType" required>
+                      <option disabled>Выбрать</option>
+                      <option value="0.04">Физическое лицо</option>
+                      <option value="0.06">Юридическое лицо</option>
+                  </select>
+              </div>
+  
+  
+              <button type="button" id="calc_button" class="btn btn-danger mt-2" onclick="calcTax()">Рассчитать размер налога</button>
+  
+          </form>
+          <div class="row">
+              <div class="alert alert-success calc_field">
+                  <strong>Номинальный размер договора состовляет: </strong>
+              </div>
+          </div>
+          <div class="row">
+              <div class="alert alert-success calc_field">
+                  <strong>Ставка налога: </strong>
+              </div>
+          </div>
+          <div class="row">
+              <div class="alert alert-success calc_field">
+                  <strong>Размер налогового вычета: </strong>
+              </div>
+          </div>
+          <div class="row">
+              <div class="alert alert-success calc_field">
+                  <strong>Ставка налогового вычета: </strong>
+              </div>
+          </div>
+          <div class="row">
+              <div class="alert alert-success calc_field">
+                  <strong>Фактический размер налога состовляет: </strong>
+              </div>
+          </div>
+          <button type="button" id="re_calc_button" class="btn btn-danger mt-2" onclick="calcAnotherTax()">Рассчитать размер налога</button>
+      </div>
+      </div>
+  </div>
+
+
+
       </div>
     <!-- Bootstrap core JavaScript -->
       <script src="lk.js"></script>
