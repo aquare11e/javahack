@@ -1,7 +1,11 @@
 package xyz.walkingcoders.javahack.dto;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class CheckResponse {
-    List<CheckResponseItem> items;
+    @JsonAlias({"ЮЛ", "ИП"})
+    CheckResponseItem items;
+
 }

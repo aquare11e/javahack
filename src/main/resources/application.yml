@@ -11,3 +11,4 @@ spring:
     show-sql: false
   liquibase:
     change-log: classpath:db/changelog-master.xml
+fns-api: 6a50edb7e305c8e1f2abecf77325656c1eeb21f7

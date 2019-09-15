@@ -13,5 +13,5 @@ public class EgrResponseItem {
     String status;
 
     @JsonAlias("Руководитель")
-    Owner owner;
+    String owner;
 }
