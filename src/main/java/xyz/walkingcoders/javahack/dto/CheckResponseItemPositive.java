@@ -7,6 +7,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 
 public class CheckResponseItemPositive {
-    @JsonProperty("текст")
+    @JsonProperty("Текст")
     String text;
 }
