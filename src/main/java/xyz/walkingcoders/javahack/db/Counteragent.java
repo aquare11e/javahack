@@ -27,16 +27,19 @@ public class Counteragent {
     @SequenceGenerator(name = "counteragent_id_seq", allocationSize = 1)
     private Long id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
-
     @ManyToOne(optional = false)
     @JoinColumn(name = "owner_id")
     private Client owner;
 
+    @Column(name = "name", nullable = false)
+    private String name;
+
+    @Column(name = "contact_person", nullable = false)
+    private String contactPerson;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false)
-    private CounteragentType type;
+    private CounteragentLegalType type;
 
     @Column(name = "inn")
     private String inn;

@@ -7,5 +7,6 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <include file="classpath:db/changelog/init-changelog.xml"/>
+    <include file="classpath:db/changelog/upgrade-changelog.xml"/>
 
 </databaseChangeLog>
