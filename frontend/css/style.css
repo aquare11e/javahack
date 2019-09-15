@@ -201,4 +201,10 @@ header {
   }
 }
 
+modal-content {
+  background: yellow;
+}
 
+.form-el {
+  margin: 20px auto;
+}
