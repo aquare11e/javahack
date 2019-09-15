@@ -320,8 +320,16 @@
       margin-left:100px
     }
 
-    #spisok{
+    .calc_field{
       display: block;
       width: 700px;
       background: #ffed00;
+      opacity: 0.7;
+      color: black;
+    }
+
+    .mt-2 {
+      color: black;
+      text-align: center;
+      text-align: -webkit-center;
     }

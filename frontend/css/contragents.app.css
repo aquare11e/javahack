@@ -298,5 +298,24 @@
       display: inline-block;
       width: 300px;
     }
+
+    .tab {
+      margin-top: 50px;
+      margin-left: 250px;
+      width: 900px;
+    }
+
+    .add-ag {
+      background: yellow;
+      color: black;
+      width: 100PX;
+      margin-left: 400px;
+      margin-top: 40px;
+      border-radius: 8px;
+    }
+
+    .modal {
+      background: yellow;
+    }
     
   

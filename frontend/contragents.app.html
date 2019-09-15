@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/cs-skin-border.css" />
     <link rel="shortcut icon" href="https://www.raiffeisen.ru/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/contragents.app.css">
-    <script src="js/app.js"></script>
+    <script src="js/contragents.app.js"></script>
     </head>
     <body>
       
@@ -42,31 +42,108 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-  
-      
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
               <img style="width: 50px;margin-right: 30px;" src="./img/user.svg">
             </ul>
           </div>
         </nav>
-        <!--<div class="container-fluid">
-          <div class="knopkilk">
-            <input id="inn" type="text" required class="lkbutton"  placeholder="Укажите ИНН контрагента"><br>
-            <button type="submit" class="lkbutton2" onclick="checkInn()">Проверить контрагента</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    -->
-      </div>
-    <!-- Bootstrap core JavaScript -->
-      <script src="lk.js"></script>
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <div class="tab">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Название контрагента</th>
+                    <th scope="col">Контактное лицо</th>
+                    <th scope="col">Реквизиты</th>
+                    <th scope="col">Тип контрагента</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Рога и копыта</td>
+                    <td>Лавочкин</td>
+                    <td>ИНН 12345</td>
+                    <td>Продавщица</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Рога и копыта</td>
+                    <td>Лавочкин</td>
+                    <td>ИНН 12345</td>
+                    <td>Продавщица</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Рога и копыта</td>
+                    <td>Лавочкин</td>
+                    <td>ИНН 12345</td>
+                    <td>Продавщица</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Рога и копыта</td>
+                    <td>Лавочкин</td>
+                    <td>ИНН 12345</td>
+                    <td>Продавщица</td>
+                  </tr>
+                </tbody>
+              </table>
 
+              <a class="yellow-btn info_btn" href="#openModal" data-toggle="modal">Регистрация контрагента?</a>
+
+        <div id="openModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Регистрация контрагента</h3>
+                        <a href="#close" title="Close" class="close" data-dismiss="modal" >×</a>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-el">
+                        <input type="text" name="name" required="" placeholder="Название контрагента">
+                        <label>Подсказка: ООО "Рога и Копыта"</label>
+                        </div>
+                        <div class="form-el">
+                            <input type="tel" name="phone" id="take_pdf_form_phone" required="" placeholder="Контактное лицо">
+                            <label>Подсказка: Лавочкин А.С</label>
+                          </div>
+                          <div class="form-el">
+                              <input type="tel" name="phone" id="take_pdf_form_phone" required="" placeholder="Реквизиты">
+                              <label>Подсказка: ИНН 1234567</label>
+                            </div>
+                          <div class="form-el">
+                              <input type="tel" name="phone" id="take_pdf_form_phone" required="" placeholder="Тип контрагента">
+                              <label> Подсказка: Клиент</label>
+                            </div>
+                      
+                          <div class="form-el">
+                        <a href="main.app.html"> <input type="submit" value="Зарегистрировать контрагента" class="submit""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+              integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/selectFx.js"></script>
+        <script>
+              (function () {
+                [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+                  new SelectFx(el);
+                });
+              })();
+        </script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/ajax_request.js"></script>
+      </body>
+    </html>
     </body>
     </html>
