@@ -13,7 +13,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 
-		<postgre.driver.version>42.3.3</postgre.driver.version>
+		<postgre.driver.version>42.4.1</postgre.driver.version>
 	</properties>
 
 	<parent>
